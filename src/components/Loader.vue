@@ -1,5 +1,10 @@
 <template>
   <div 
+    :style="{
+      width: `${size}rem`,
+      height: `${size}rem`,
+      zIndex
+    }"
     :class="{ absolute, fixed }"
     class="spinner-border text-primary"></div>  
 </template>
@@ -28,5 +33,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.spinner-border {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &.absolute{
+    position: absolute;
+  }
+  &.fixed{
+    position: fixed;
+  }
+}
 </style>
