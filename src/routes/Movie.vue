@@ -46,7 +46,7 @@
               v-for="{ Source : name, Value : score } in theMovie.Ratings"
               :key="name"
               :title="name" 
-              class="ratings">
+              class="rating">
               <img 
                 :src="`https://raw.githubusercontent.com/ParkYoungWoong/vue3-movie-app/master/src/assets/${name}.png`" 
                 :alt="name" />
@@ -119,7 +119,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
 
 .container{
   padding-top: 40px;
@@ -200,7 +199,7 @@ export default {
     .ratings{
       .ratings-wrap{
         display: flex;
-        .ratings{
+        .rating{
           display: flex;
           align-items: center;
           margin-right: 32px;
@@ -217,6 +216,34 @@ export default {
       color: $black;
       font-family: 'Oswald', sans-serif;
       font-size: 20px;
+    }
+  }
+  @include media-breakpoint-down(xl){
+    .poster{
+      width:300px;
+      height: 300px * 3 / 2;
+      margin-right: 40px;
+    }
+  }
+  @include media-breakpoint-down(lg){
+    display: block;
+    .poster{
+      margin-bottom:40px;
+    }
+  }
+  @include media-breakpoint-down(md){
+    .specs{
+      .title{
+        font-size: 50px;
+      }
+      .ratings{
+        .ratings-wrap{
+          display: block;
+          .rating{
+            margin-top: 10px;
+          }
+        }
+      }
     }
   }
 }

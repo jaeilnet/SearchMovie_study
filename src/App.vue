@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~/scss/main"; //main.scss 연결
+
 </style>
