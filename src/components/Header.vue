@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Logo from '~/components/Logo'
 
 export default {
@@ -41,7 +42,7 @@ export default {
         },
          {
           name:'Movie',
-          href:'/movie/tt4520988',
+          href:'/movie/',
           path: /^\/movie/
         },
          {
@@ -52,12 +53,10 @@ export default {
     }
   },
   computed:{
-    image(){
-      return this.$store.state.about.image
-    },
-    name(){
-      return this.$store.state.about.name
-    }
+     ...mapState('about', [
+      'image',
+      'name'
+    ])
   },
   methods:{
     isMatch(path){

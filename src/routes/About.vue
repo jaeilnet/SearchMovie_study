@@ -37,7 +37,7 @@ export default {
       'email',
       'blog',
       'phone',
-   ])
+    ])
   },
   mounted(){
     this.init()

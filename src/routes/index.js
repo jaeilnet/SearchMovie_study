@@ -8,6 +8,9 @@ export default createRouter({
   // Hash 모드
   // https://google.com/#search 와 같이 #(hash)으로 접근
   history: createWebHashHistory(),
+  scrollBehavior(){
+    return { top:0 }
+  },
   // pages 구분
   routes : [
     {
