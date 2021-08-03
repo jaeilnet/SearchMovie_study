@@ -102,6 +102,6 @@ export default {
   }
 }
 
-async function _fetchMovie(payload){
+async function _fetchMovie(payload) {
   return await axios.post('/.netlify/functions/movie', payload)
 }

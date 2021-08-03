@@ -104,7 +104,7 @@ export default {
     requetDiffSizeImage(url, size = 700){
       if(!url || url === 'N/A'){
         this.imageLoading = false
-        return 'No Poster'
+        return ''
       } 
       const src = url.replace('SX300', `SX${size}`)
       this.$loadImage(src)
