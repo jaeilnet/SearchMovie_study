@@ -37,7 +37,7 @@ export default {
     return{
       navigations:[
         {
-          name:'Serach',
+          name:'Search',
           href:'/',
         },
          {
